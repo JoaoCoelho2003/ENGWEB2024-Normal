@@ -12,9 +12,9 @@ module.exports.lookUp = id => {
         .exec()
 }
 
-module.exports.lookUpEntidade = entidade => {
+module.exports.lookUpEntidade = NIPC_entidade_comunicante => {
     return Contrato
-        .find({ entidade_comunicante: entidade })
+        .find({ NIPC_entidade_comunicante: NIPC_entidade_comunicante })
         .exec()
 }
 

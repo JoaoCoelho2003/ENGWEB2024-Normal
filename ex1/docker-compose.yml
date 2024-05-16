@@ -11,6 +11,6 @@ services:
     container_name: contratos-mongo-seed
     image: mongo:latest
     volumes:
-      - /home/jojocoelho/Desktop/3Ano2Semestre/EngWeb/ENGWEB2024-Normal/ex1/datasets/contratos.json:/datasets//home/jojocoelho/Desktop/3Ano2Semestre/EngWeb/ENGWEB2024-Normal/ex1/datasets/contratos.json
+      - /home/jojocoelho/Desktop/3Ano2Semestre/EngWeb/ENGWEB2024-Normal/ex1/datasets/contratos2024Final.json:/datasets//home/jojocoelho/Desktop/3Ano2Semestre/EngWeb/ENGWEB2024-Normal/ex1/datasets/contratos2024Final.json
 
-    command: /bin/bash -c "mongoimport --host mongodb -d contratos -c contratos --type json --file /datasets//home/jojocoelho/Desktop/3Ano2Semestre/EngWeb/ENGWEB2024-Normal/ex1/datasets/contratos.json --jsonArray"
+    command: /bin/bash -c "mongoimport --host mongodb -d contratos -c contratos --type json --file /datasets//home/jojocoelho/Desktop/3Ano2Semestre/EngWeb/ENGWEB2024-Normal/ex1/datasets/contratos2024Final.json --jsonArray"
