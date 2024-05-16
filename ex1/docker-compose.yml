@@ -1,0 +1,16 @@
+
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    depends_on:
+      - mongo-seed
+  mongo-seed:
+    container_name: contratos-mongo-seed
+    image: mongo:latest
+    volumes:
+      - /home/jojocoelho/Desktop/3Ano2Semestre/EngWeb/ENGWEB2024-Normal/ex1/datasets/contratos2024Corrected.json:/datasets//home/jojocoelho/Desktop/3Ano2Semestre/EngWeb/ENGWEB2024-Normal/ex1/datasets/contratos2024Corrected.json
+
+    command: /bin/bash -c "mongoimport --host mongodb -d contratos -c contratos --type json --file /datasets//home/jojocoelho/Desktop/3Ano2Semestre/EngWeb/ENGWEB2024-Normal/ex1/datasets/contratos2024Corrected.json --jsonArray"
