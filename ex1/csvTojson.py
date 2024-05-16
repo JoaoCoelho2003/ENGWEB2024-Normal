@@ -3,7 +3,7 @@ import json
 
 # Define the input and output file paths explicitly
 input_file = './datasets/contratos2024.csv'
-output_file = './datasets/contratos2024Corrected.json'
+output_file = './datasets/contratos.json'
 
 def csv_to_json(input_file, output_file):
     # Read the CSV file
